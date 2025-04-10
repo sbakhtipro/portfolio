@@ -28,12 +28,17 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: black;
     font-family: 'raleway';
     font-weight: 400;
+}
+
+main {
+    min-height: 100vh;
 }
 
 a {
@@ -490,7 +495,7 @@ header {
 .projects__project {
     width: 48%;
     aspect-ratio: 3/2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
     border: 1px solid rgb(255, 255, 255);
@@ -509,18 +514,18 @@ header {
 }
 
 .projects__project-overlay {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0,0,0,0.7) 60%, rgba(91, 91, 91,0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0,0,0,0.75) 65%, rgba(91, 91, 91,0.5) 100%);
     box-sizing: border-box;
     padding: 1.5rem;
-    opacity: 0;
+    opacity: 1;
     display: flex;
     align-items: end;
     transition: var(--transition);
 }
-
-.projects__project-overlay:hover {
-    opacity: 1;
-}
+ 
+/* .projects__project-overlay:hover {
+    opacity: 0;
+} */
 
 .projects__project-content {
     text-align: left;
@@ -528,12 +533,12 @@ header {
 }
 
 .projects__project-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .projects__project-description {
     margin: 1rem 0;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .projects__project-technologies {
@@ -605,6 +610,17 @@ footer h4 {
 .footer__links a img {
     filter: brightness(60%);
     width: 1rem;
+}
+
+.footer__media .icon {
+    width: 36px;
+    filter: brightness(60%);
+    transition: var(--transition);
+}
+
+.footer__media .icon:hover {
+    width: 36px;
+    filter: brightness(100%)
 }
 
 .footer__copyright {
@@ -712,4 +728,19 @@ footer h4 {
         width: 100%;
         margin-bottom: 2rem;
     }
+}
+
+.credits {
+    color: white;
+}
+
+.credits h1 {
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.credits li {
+    list-style: none;
+    margin-bottom: 5px;
 }
