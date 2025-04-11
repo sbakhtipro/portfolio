@@ -9,16 +9,17 @@
     --tertiary-color:rgb(71, 71, 71);
     --p-color:rgb(160, 160, 160);
     --transition: 0.3s ease;
-    --js-skill : 50%;
-    --html-css-skill : 80%;
-    --php-skill : 70%;
-    --github-skill : 50%;
-    --python-skill : 60%;
-    --bootstrap-skill : 40%;
-    --sql-skill : 70%;
-    --figma-skill : 70%;
-    --vsc-skill : 80%;
-    --react-skill : 60%;
+    --js-skill: 50%;
+    --html-css-skill: 80%;
+    --php-skill: 60%;
+    --python-skill: 60%;
+    --bootstrap-skill: 70%;
+    --sql-skill: 70%;
+    --react-skill: 30%;
+    --vsc-skill: 80%;
+    --github-skill: 50%;
+    --figma-skill: 70%;
+    --looping-skill: 60%;
 }
 
 html {
@@ -353,12 +354,25 @@ header {
     animation: progressBarFigma 1.5s forwards;
 }
 
+.looping-bar.visible {
+    animation: progressBarLooping 1.5s forwards;
+}
+
 @keyframes progressBarFigma {
     0% {
         width: 0;
     }
     100% {
         width: var(--figma-skill);
+    }
+}
+
+@keyframes progressBarLooping {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--looping-skill);
     }
 }
 
